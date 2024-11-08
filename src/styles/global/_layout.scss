@@ -1,0 +1,63 @@
+@use "../config/index.scss" as *;
+
+// -----------------------------------------------------------------------------
+// Global Reset
+// -----------------------------------------------------------------------------
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  padding: 0;
+  scroll-behavior: smooth;
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+  @include breakpoint(m) {
+    border: 4px solid red;
+  }
+}
+
+#root,
+#__next {
+  isolation: isolate;
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+}
+
+// Make sure footer is always at the bottom of the window,
+// even when content in the main section is shorter.
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overscroll-behavior: none;
+}
+
+.main {
+  flex: 1;
+}
+
+// Helper class for assistive technology elements
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

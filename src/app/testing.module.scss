@@ -1,0 +1,6 @@
+.someClass {
+  font-size: toRem(20);
+  @include breakpoint(m) {
+    border: 4px solid red;
+  }
+}

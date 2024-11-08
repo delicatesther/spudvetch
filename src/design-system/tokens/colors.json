@@ -1,0 +1,20 @@
+{
+  "color": {
+    "grijs": {
+      "-300": "#111111",
+      "-200": "#222222",
+      "-100": "#444444",
+      "0": "#666666",
+      "100": "#888888",
+      "200": "#BBBBBB",
+      "300": "#DDDDDD",
+      "400": "#EEEEEE",
+      "500": "#FFFFFF",
+      "primair": "#222222",
+      "secundair": "#666666",
+      "tertiair": "#BBBBBB",
+      "kwartair": "#EEEEEE",
+      "quintair": "#FFFFFF"
+    }
+  }
+}
