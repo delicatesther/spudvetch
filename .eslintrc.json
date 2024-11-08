@@ -1,3 +1,78 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:storybook/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "react/jsx-filename-extension": "off",
+    "react/display-name": 0,
+    "jsx-a11y/alt-text": 0,
+    "react/function-component-definition": "off",
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "@typescript-eslint/no-unused-vars": "error",
+    "import/no-named-as-default": 0,
+    "import/order": [
+      1,
+      {
+        "groups": ["external", "builtin", "internal"],
+        "newlines-between": "always"
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "arrow-body-style": "off",
+    "no-unused-expressions": "off",
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
+    "prefer-regex-literals": "off",
+    "react/require-default-props": "off",
+    "react/destructuring-assignment": "off",
+    "jsx-a11y/media-has-caption": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.ts",
+          "**/*.test.tsx",
+          "**/*.test.js",
+          "**/*.test.jsx"
+        ]
+      }
+    ]
+  },
+  "env": {
+    "jest": false,
+    "es6": true
+  },
+  "settings": {
+    "typescript": true,
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.{js,ts,jsx,tsx}"]
+    }
+  ]
 }

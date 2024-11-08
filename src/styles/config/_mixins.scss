@@ -4,13 +4,14 @@
 // -----------------------------------------------------------------------------
 @use "functions" as *;
 @use "variables" as *;
+@use "sass:map";
 
 // -----------------------------------------------------------------------------
 // Media queries and breakpoints
 // -----------------------------------------------------------------------------
 @mixin breakpoint($bp, $type: min) {
-  @if map_has_key($breakpoints, $bp) {
-    $bp: map_get($breakpoints, $bp);
+  @if map.has-key($breakpoints, $bp) {
+    $bp: map.get($breakpoints, $bp);
     @if $type == max {
       $bp: $bp - 1;
     }
